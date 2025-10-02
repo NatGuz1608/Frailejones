@@ -1,0 +1,103 @@
+[gd_scene load_steps=13 format=4 uid="uid://clv4uhxseijvj"]
+
+[ext_resource type="Texture2D" uid="uid://tikgrcdfrros" path="res://assets/Terreno/cielo.png" id="1_nnhoj"]
+[ext_resource type="Texture2D" uid="uid://bagbbrbgmenkk" path="res://assets/Terreno/piso frailejon.png" id="1_qup40"]
+[ext_resource type="Texture2D" uid="uid://dawmrov1us57k" path="res://assets/Terreno/motaña.png" id="2_etweh"]
+[ext_resource type="PackedScene" uid="uid://df10qun8b2a72" path="res://Escenas/Player.tscn" id="2_nnhoj"]
+[ext_resource type="Texture2D" uid="uid://cto886g2yw5ub" path="res://assets/Terreno/pasto decorativo2 frailejon.png" id="3_sbnke"]
+[ext_resource type="Texture2D" uid="uid://u5rypr4gqx4t" path="res://assets/Terreno/pasto decoratvio 3 frailejon.png" id="4_dawtg"]
+[ext_resource type="Texture2D" uid="uid://6teugpuhu3oj" path="res://assets/Terreno/pasto decorativo1 frailejon.png" id="5_uqrhm"]
+[ext_resource type="Texture2D" uid="uid://ytd4ch24cqdj" path="res://assets/Terreno/arbol lejano.png" id="6_uqrhm"]
+[ext_resource type="Texture2D" uid="uid://dn5wcdai60fgq" path="res://assets/Terreno/nube1.png" id="7_rl3b6"]
+[ext_resource type="Texture2D" uid="uid://cvmtuoggsh6eh" path="res://assets/Terreno/nube2.png" id="8_jaav8"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1d5jh"]
+texture = ExtResource("1_qup40")
+margins = Vector2i(3, 3)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_7rpyo"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_1d5jh")
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Cielo" type="Sprite2D" parent="."]
+position = Vector2(160, 91)
+scale = Vector2(3.28, 3.6400006)
+texture = ExtResource("1_nnhoj")
+
+[node name="Motaña2" type="Sprite2D" parent="Cielo"]
+position = Vector2(137.65247, 52.1978)
+scale = Vector2(0.35346803, 0.7678218)
+texture = ExtResource("2_etweh")
+
+[node name="Motaña" type="Sprite2D" parent="Cielo"]
+texture_filter = 6
+position = Vector2(26.21952, 55.769226)
+scale = Vector2(0.47541928, 0.7117707)
+texture = ExtResource("2_etweh")
+
+[node name="PastoDecorativo2Frailejon" type="Sprite2D" parent="Cielo"]
+texture_filter = 1
+position = Vector2(-31.707321, 74.45055)
+scale = Vector2(2.5043557, 2.3901098)
+texture = ExtResource("3_sbnke")
+
+[node name="PastoDecoratvio3Frailejon" type="Sprite2D" parent="Cielo"]
+texture_filter = 1
+position = Vector2(3.2012177, 75.54944)
+scale = Vector2(3.2447739, 2.5641024)
+texture = ExtResource("4_dawtg")
+
+[node name="PastoDecorativo1Frailejon" type="Sprite2D" parent="Cielo"]
+texture_filter = 1
+position = Vector2(44.20732, 75.27472)
+scale = Vector2(3.230534, 2.1291223)
+texture = ExtResource("5_uqrhm")
+
+[node name="PastoDecoratvio3Frailejon2" type="Sprite2D" parent="Cielo"]
+texture_filter = 1
+position = Vector2(81.40246, 76.09889)
+scale = Vector2(2.8527884, 2.6098895)
+texture = ExtResource("4_dawtg")
+
+[node name="PastoDecorativo2Frailejon2" type="Sprite2D" parent="Cielo"]
+texture_filter = 1
+position = Vector2(128.20123, 74.553566)
+scale = Vector2(3.8109756, 2.6785712)
+texture = ExtResource("3_sbnke")
+
+[node name="ArbolLejano" type="Sprite2D" parent="Cielo"]
+position = Vector2(13.66235, 72.32143)
+scale = Vector2(0.6126875, 0.49221608)
+texture = ExtResource("6_uqrhm")
+
+[node name="ArbolLejano2" type="Sprite2D" parent="Cielo"]
+position = Vector2(77.43903, 68.95604)
+scale = Vector2(0.6781582, 0.72496927)
+texture = ExtResource("6_uqrhm")
+
+[node name="Nube1" type="Sprite2D" parent="Cielo"]
+position = Vector2(16.768295, 4.670332)
+scale = Vector2(0.7213353, 0.5141287)
+texture = ExtResource("7_rl3b6")
+
+[node name="Nube1" type="Sprite2D" parent="Cielo/Nube1"]
+position = Vector2(-47.33769, 12.290073)
+scale = Vector2(0.703687, 0.88991284)
+texture = ExtResource("7_rl3b6")
+
+[node name="Nube2" type="Sprite2D" parent="Cielo/Nube1"]
+position = Vector2(160.18735, -9.083973)
+scale = Vector2(0.78896147, 0.97482973)
+texture = ExtResource("8_jaav8")
+
+[node name="Piso" type="TileMapLayer" parent="."]
+position = Vector2(0, 401)
+tile_map_data = PackedByteArray("AAAAAP//AAAAAAAAAAABAP//AAAAAAAAAAACAP//AAAAAAAAAAADAP//AAAAAAAAAAAEAP//AAAAAAAAAAAFAP//AAAAAAAAAAAGAP//AAAAAAAAAAAHAP//AAAAAAAAAAAIAP//AAAAAAAAAAAJAP//AAAAAAAAAAAKAP//AAAAAAAAAAALAP//AAAAAAAAAAAMAP//AAAAAAAAAAANAP//AAAAAAAAAAAOAP//AAAAAAAAAAAPAP//AAAAAAAAAAAQAP//AAAAAAAAAAARAP//AAAAAAAAAAASAP//AAAAAAAAAAATAP//AAAAAAAAAAAUAP//AAAAAAAAAAAVAP//AAAAAAAAAAAWAP//AAAAAAAAAAAXAP//AAAAAAAAAAAYAP//AAAAAAAAAAAZAP//AAAAAAAAAAAaAP//AAAAAAAAAAAbAP//AAAAAAAAAAAcAP//AAAAAAAAAAAdAP//AAAAAAAAAAAeAP//AAAAAAAAAAAfAP//AAAAAAAAAAAgAP//AAAAAAAAAAAhAP//AAAAAAAAAAAiAP//AAAAAAAAAAAjAP//AAAAAAAAAAAkAP//AAAAAAAAAAAlAP//AAAAAAAAAAAmAP//AAAAAAAAAAAnAP//AAAAAAAAAAAoAP//AAAAAAAAAAApAP//AAAAAAAAAAD/////AAAAAAAAAAD///7/AAAAAAAAAAD///3/AAAAAAAAAAD///z/AAAAAAAAAAD///v/AAAAAAAAAAD///r/AAAAAAAAAAD///n/AAAAAAAAAAD///j/AAAAAAAAAAD+//j/AAAAAAAAAAD+//f/AAAAAAAAAAD+//b/AAAAAAAAAAD///b/AAAAAAAAAAD///X/AAAAAAAAAAD///f/AAAAAAAAAAApAP7/AAAAAAAAAAApAP3/AAAAAAAAAAApAPz/AAAAAAAAAAApAPv/AAAAAAAAAAApAPr/AAAAAAAAAAApAPn/AAAAAAAAAAAqAPn/AAAAAAAAAAAqAPj/AAAAAAAAAAAqAPf/AAAAAAAAAAAqAPb/AAAAAAAAAAAqAPX/AAAAAAAAAAApAPX/AAAAAAAAAAApAPT/AAAAAAAAAAApAPP/AAAAAAAAAAApAPL/AAAAAAAAAAApAPb/AAAAAAAAAAApAPf/AAAAAAAAAAApAPj/AAAAAAAAAAA=")
+tile_set = SubResource("TileSet_7rpyo")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_nnhoj")]
+position = Vector2(31, 322)
