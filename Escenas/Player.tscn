@@ -142,7 +142,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Ataque",
-"speed": 12.0
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -204,4 +204,4 @@ shape = SubResource("CapsuleShape2D_tdg3f")
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_2n1s8")
 animation = &"Ataque"
-frame_progress = 0.032459754
+frame_progress = 0.9957777
