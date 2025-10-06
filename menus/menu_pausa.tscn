@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=3 uid="uid://bjt3wdyctwxs1"]
+
+[ext_resource type="Theme" uid="uid://d0ypeyhhl5p2u" path="res://menus/menu inicio/menu_inicio.tres" id="1_npcwh"]
+[ext_resource type="Script" uid="uid://bnss4dl7liqtj" path="res://menus/menu_pausa.gd" id="2_vil7n"]
+[ext_resource type="Texture2D" uid="uid://cl6duvh4w4oc1" path="res://menus/menu pausa/menu pausa.png" id="3_0yxtr"]
+[ext_resource type="PackedScene" uid="uid://bcrtexiecbhx1" path="res://menus/menu inicio/custombutton.tscn" id="3_h3mkm"]
+
+[node name="menu pausa" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_npcwh")
+script = ExtResource("2_vil7n")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(323.99997, 201.00002)
+scale = Vector2(0.4179688, 0.39062497)
+texture = ExtResource("3_0yxtr")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 118
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 10
+
+[node name="reanudar" parent="MarginContainer/VBoxContainer" instance=ExtResource("3_h3mkm")]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Reanudar"
+
+[node name="reinicio" parent="MarginContainer/VBoxContainer" instance=ExtResource("3_h3mkm")]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Reiniciar Nivel"
+
+[node name="inicio" parent="MarginContainer/VBoxContainer" instance=ExtResource("3_h3mkm")]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Menu principal"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/reanudar" to="." method="_on_reanudar_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/reinicio" to="." method="_on_reinicio_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/inicio" to="." method="_on_inicio_pressed"]

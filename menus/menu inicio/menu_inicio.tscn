@@ -1,0 +1,64 @@
+[gd_scene load_steps=6 format=3 uid="uid://csl4i6slsrua1"]
+
+[ext_resource type="Theme" uid="uid://d0ypeyhhl5p2u" path="res://menus/menu inicio/menu_inicio.tres" id="1_qtkmd"]
+[ext_resource type="Script" uid="uid://b3gg6qpjr5jxg" path="res://menus/menu inicio/menu_inicio.gd" id="2_6abwe"]
+[ext_resource type="Texture2D" uid="uid://b6kwf2vfcjgsk" path="res://menus/menu inicio/menu inicio.png" id="3_6abwe"]
+[ext_resource type="PackedScene" uid="uid://bcrtexiecbhx1" path="res://menus/menu inicio/custombutton.tscn" id="3_vp333"]
+
+[sub_resource type="Theme" id="Theme_ylpju"]
+MarginContainer/constants/margin_bottom = 10
+MarginContainer/constants/margin_left = 10
+MarginContainer/constants/margin_right = 10
+MarginContainer/constants/margin_top = 10
+
+[node name="menu inicio" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_qtkmd")
+script = ExtResource("2_6abwe")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(325, 200.5)
+scale = Vector2(0.42317703, 0.3857422)
+texture = ExtResource("3_6abwe")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_ylpju")
+theme_override_constants/margin_top = 181
+theme_override_constants/margin_right = 67
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_constants/separation = 10
+
+[node name="Jugar" parent="MarginContainer/VBoxContainer" instance=ExtResource("3_vp333")]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Jugar"
+
+[node name="Seleccion" parent="MarginContainer/VBoxContainer" instance=ExtResource("3_vp333")]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Selecion   
+  de niveles   "
+
+[node name="Salir" parent="MarginContainer/VBoxContainer" instance=ExtResource("3_vp333")]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Salir"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Jugar" to="." method="_on_jugar_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Seleccion" to="." method="_on_seleccion_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Salir" to="." method="_on_salir_pressed"]

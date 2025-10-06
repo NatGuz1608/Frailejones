@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drtelv6dt0nd6"
-path="res://.godot/imported/idle.png-2f5c043faf0b6164fdc79b52a32b3744.ctex"
+uid="uid://dlex4k6cb2w7u"
+path="res://.godot/imported/caminata capa pintura.png-ada28d4b2a05c7b876827df917bd5d8e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Movimientos/idle.png"
-dest_files=["res://.godot/imported/idle.png-2f5c043faf0b6164fdc79b52a32b3744.ctex"]
+source_file="res://assets/Movimientos/Frailejon/caminata capa pintura.png"
+dest_files=["res://.godot/imported/caminata capa pintura.png-ada28d4b2a05c7b876827df917bd5d8e.ctex"]
 
 [params]
 

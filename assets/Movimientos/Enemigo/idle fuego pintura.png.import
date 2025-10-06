@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dlex4k6cb2w7u"
-path="res://.godot/imported/caminata capa pintura.png-dc0181553c58258f4c146bd65ec8b6fa.ctex"
+uid="uid://dhx54e72ll0j8"
+path="res://.godot/imported/idle fuego pintura.png-8c2be2d674759dca2a8e0212714bec15.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Movimientos/caminata capa pintura.png"
-dest_files=["res://.godot/imported/caminata capa pintura.png-dc0181553c58258f4c146bd65ec8b6fa.ctex"]
+source_file="res://assets/Movimientos/Enemigo/idle fuego pintura.png"
+dest_files=["res://.godot/imported/idle fuego pintura.png-8c2be2d674759dca2a8e0212714bec15.ctex"]
 
 [params]
 

@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bcrtexiecbhx1"]
+
+[ext_resource type="Script" uid="uid://87owgyn2uqyb" path="res://menus/menu inicio/custombutton.gd" id="1_fayff"]
+[ext_resource type="AudioStream" uid="uid://dgm5ccdtcrbvy" path="res://menus/boton.mp3" id="2_dnn3k"]
+
+[node name="custombutton" type="Button"]
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Play"
+script = ExtResource("1_fayff")
+
+[node name="Click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_dnn3k")
+playback_type = 1
+
+[node name="OnHover" type="AudioStreamPlayer" parent="."]
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="pressed" from="." to="." method="_on_pressed"]

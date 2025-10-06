@@ -5,11 +5,14 @@ const JUMP_VELOCITY = -400.0
 const GRAVITY = 980.0  # <--- ADDED: Define gravity value (standard Godot default is often around 980)
 var attack: bool = false
 
+
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += GRAVITY * delta 
-
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("pausa"):
+		get_tree().paused = true
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor() and not attack:
 		velocity.y = JUMP_VELOCITY
