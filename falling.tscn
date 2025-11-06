@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://b87k4l1ccxy71"]
+
+[ext_resource type="Texture2D" uid="uid://dd4cp3qf677u3" path="res://Assets/gota2.png" id="1_1viel"]
+[ext_resource type="Script" uid="uid://dct1ko01nmuxx" path="res://falling.gd" id="1_of7ru"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_of7ru"]
+radius = 22.203604
+
+[node name="Falling" type="Area2D"]
+script = ExtResource("1_of7ru")
+
+[node name="Sprite2D" type="Sprite2D" parent="." groups=["obstacle"]]
+position = Vector2(236.5, -39.5)
+scale = Vector2(1.4791666, 1.4375)
+texture = ExtResource("1_1viel")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["obstacle"]]
+position = Vector2(238, -26)
+shape = SubResource("CircleShape2D_of7ru")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
