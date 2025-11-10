@@ -20,9 +20,9 @@ width = 265
 script = ExtResource("1_hly68")
 
 [node name="Background" type="Sprite2D" parent="."]
-position = Vector2(237.55568, 324.2879)
+position = Vector2(248.55568, 324.30624)
 rotation = -1.5691277
-scale = Vector2(4.100852, 478.92648)
+scale = Vector2(4.100852, 500.9265)
 texture = SubResource("GradientTexture1D_hly68")
 
 [node name="Nube" type="Sprite2D" parent="Background"]
