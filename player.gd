@@ -3,7 +3,7 @@ extends Area2D
 @export var speed: int = 200
 var velocity: Vector2 = Vector2.ZERO
 var screen_size: Vector2
-var move_area: Rect2 = Rect2(0, 0, 480, 854)
+var move_area: Rect2 = Rect2(0, 0, 440, 854)
 
 func _ready() -> void:
 	screen_size = get_viewport_rect().size
