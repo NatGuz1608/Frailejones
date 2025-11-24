@@ -1,0 +1,61 @@
+[gd_resource type="Theme" load_steps=9 format=3 uid="uid://d0ypeyhhl5p2u"]
+
+[ext_resource type="Texture2D" uid="uid://ukjikqkukrgj" path="res://Assets/menus/botones.png" id="1_li5qv"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tskj3"]
+texture = ExtResource("1_li5qv")
+expand_margin_left = 30.0
+expand_margin_top = 30.0
+expand_margin_right = 30.0
+expand_margin_bottom = 30.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iwt2x"]
+texture = ExtResource("1_li5qv")
+expand_margin_left = 30.0
+expand_margin_top = 30.0
+expand_margin_right = 30.0
+expand_margin_bottom = 30.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ohit5"]
+texture = ExtResource("1_li5qv")
+expand_margin_left = 30.0
+expand_margin_top = 30.0
+expand_margin_right = 30.0
+expand_margin_bottom = 30.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kqq1e"]
+texture = ExtResource("1_li5qv")
+expand_margin_left = 30.0
+expand_margin_top = 30.0
+expand_margin_right = 30.0
+expand_margin_bottom = 30.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_li5qv"]
+texture = ExtResource("1_li5qv")
+expand_margin_left = 30.0
+expand_margin_top = 30.0
+expand_margin_right = 30.0
+expand_margin_bottom = 30.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_duo4v"]
+texture = ExtResource("1_li5qv")
+expand_margin_left = 30.0
+expand_margin_top = 30.0
+expand_margin_right = 30.0
+expand_margin_bottom = 30.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ud436"]
+
+[resource]
+Button/styles/focus = SubResource("StyleBoxTexture_tskj3")
+Button/styles/hover = SubResource("StyleBoxTexture_iwt2x")
+Button/styles/hover_mirrored = SubResource("StyleBoxTexture_ohit5")
+Button/styles/hover_pressed = SubResource("StyleBoxTexture_kqq1e")
+Button/styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_li5qv")
+Button/styles/normal = SubResource("StyleBoxTexture_duo4v")
+Button/styles/normal_mirrored = SubResource("StyleBoxTexture_ud436")
+Button/styles/pressed = null
+MarginContainer/constants/margin_bottom = 10
+MarginContainer/constants/margin_left = 10
+MarginContainer/constants/margin_right = 10
+MarginContainer/constants/margin_top = 10

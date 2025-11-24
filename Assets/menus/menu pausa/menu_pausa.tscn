@@ -1,0 +1,74 @@
+[gd_scene load_steps=8 format=3 uid="uid://bjt3wdyctwxs1"]
+
+[ext_resource type="Theme" uid="uid://d0ypeyhhl5p2u" path="res://Assets/menus/menu inicio/menu_inicio.tres" id="1_npcwh"]
+[ext_resource type="Script" uid="uid://bnss4dl7liqtj" path="res://Assets/menus/menu pausa/menu_pausa.gd" id="2_vil7n"]
+[ext_resource type="Texture2D" uid="uid://cgewikwovdxns" path="res://Assets/menus/menu pausa/menu_pausa_vertical.png" id="3_0yxtr"]
+[ext_resource type="PackedScene" uid="uid://bcrtexiecbhx1" path="res://Assets/menus/menu inicio/custombutton.tscn" id="3_h3mkm"]
+[ext_resource type="Texture2D" uid="uid://ukjikqkukrgj" path="res://Assets/menus/botones.png" id="4_0yxtr"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6esx4"]
+content_margin_left = 40.0
+content_margin_top = 20.0
+content_margin_right = 40.0
+content_margin_bottom = 20.0
+texture = ExtResource("4_0yxtr")
+expand_margin_left = 15.0
+expand_margin_top = 15.0
+expand_margin_right = 15.0
+expand_margin_bottom = 15.0
+
+[sub_resource type="Theme" id="Theme_n85sq"]
+Button/font_sizes/font_size = 30
+Button/styles/normal = SubResource("StyleBoxTexture_6esx4")
+
+[node name="menu pausa" type="Control"]
+process_mode = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_npcwh")
+script = ExtResource("2_vil7n")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(241, 424)
+scale = Vector2(1.0110677, 0.99273634)
+texture = ExtResource("3_0yxtr")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = 44.0
+offset_right = 12.0
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_n85sq")
+theme_override_constants/margin_top = 118
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 40
+
+[node name="reanudar" parent="MarginContainer/VBoxContainer" instance=ExtResource("3_h3mkm")]
+layout_mode = 2
+text = "Reanudar"
+
+[node name="reinicio" parent="MarginContainer/VBoxContainer" instance=ExtResource("3_h3mkm")]
+layout_mode = 2
+text = "Reiniciar Nivel"
+
+[node name="inicio" parent="MarginContainer/VBoxContainer" instance=ExtResource("3_h3mkm")]
+layout_mode = 2
+text = "Menu principal"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/reanudar" to="." method="_on_reanudar_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/reinicio" to="." method="_on_reinicio_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/inicio" to="." method="_on_inicio_pressed"]

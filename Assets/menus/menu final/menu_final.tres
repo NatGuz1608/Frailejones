@@ -1,0 +1,56 @@
+[gd_resource type="Theme" load_steps=12 format=3 uid="uid://blgydqnmb5x3g"]
+
+[ext_resource type="Texture2D" uid="uid://cs7aqa88nsq03" path="res://Assets/menus/menu final/boton azul.png" id="1_1n17h"]
+
+[sub_resource type="FontVariation" id="FontVariation_urih3"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sldrg"]
+texture = ExtResource("1_1n17h")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j7ed3"]
+texture = ExtResource("1_1n17h")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_turwt"]
+texture = ExtResource("1_1n17h")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kgoar"]
+texture = ExtResource("1_1n17h")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6pgae"]
+texture = ExtResource("1_1n17h")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pp37n"]
+texture = ExtResource("1_1n17h")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_urih3"]
+texture = ExtResource("1_1n17h")
+texture_margin_left = 18.0
+texture_margin_top = 18.0
+texture_margin_right = 18.0
+texture_margin_bottom = 18.0
+expand_margin_left = 30.0
+expand_margin_top = 24.0
+expand_margin_right = 30.0
+expand_margin_bottom = 26.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0yorf"]
+texture = ExtResource("1_1n17h")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ga2f1"]
+texture = ExtResource("1_1n17h")
+
+[resource]
+Button/colors/font_color = Color(18.892157, 18.892157, 18.892157, 1)
+Button/constants/align_to_largest_stylebox = 0
+Button/constants/h_separation = 4
+Button/font_sizes/font_size = 33
+Button/fonts/font = SubResource("FontVariation_urih3")
+Button/styles/disabled = SubResource("StyleBoxTexture_sldrg")
+Button/styles/disabled_mirrored = SubResource("StyleBoxTexture_j7ed3")
+Button/styles/focus = SubResource("StyleBoxTexture_turwt")
+Button/styles/hover = SubResource("StyleBoxTexture_kgoar")
+Button/styles/hover_pressed = SubResource("StyleBoxTexture_6pgae")
+Button/styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_pp37n")
+Button/styles/normal = SubResource("StyleBoxTexture_urih3")
+Button/styles/normal_mirrored = SubResource("StyleBoxTexture_0yorf")
+Button/styles/pressed = SubResource("StyleBoxTexture_ga2f1")

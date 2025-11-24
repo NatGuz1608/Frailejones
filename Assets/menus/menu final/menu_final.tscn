@@ -1,0 +1,80 @@
+[gd_scene load_steps=6 format=3 uid="uid://bd6hhatcykai7"]
+
+[ext_resource type="Texture2D" uid="uid://dut5ei83ipm86" path="res://Assets/menus/menu final/imagen final.png" id="1_j2k0w"]
+[ext_resource type="Theme" uid="uid://blgydqnmb5x3g" path="res://Assets/menus/menu final/menu_final.tres" id="1_y26c8"]
+[ext_resource type="Script" uid="uid://clr3bf3yr3wi7" path="res://Assets/menus/menu final/menu_final.gd" id="2_jl2rw"]
+[ext_resource type="PackedScene" uid="uid://bcrtexiecbhx1" path="res://Assets/menus/menu inicio/custombutton.tscn" id="3_jl2rw"]
+
+[sub_resource type="Theme" id="Theme_sxgig"]
+
+[node name="menu final" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_y26c8")
+script = ExtResource("2_jl2rw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(240.00002, 429)
+scale = Vector2(0.46875, 0.5563151)
+texture = ExtResource("1_j2k0w")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.44700003
+anchor_top = 0.523
+anchor_right = 0.44700003
+anchor_bottom = 0.523
+offset_left = -149.56001
+offset_top = -338.642
+offset_right = 204.43999
+offset_bottom = 234.358
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_sxgig")
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 294
+theme_override_constants/margin_right = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_constants/line_spacing = 4
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/font_size = 33
+text = "  
+
+"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+z_as_relative = false
+layout_mode = 2
+size_flags_vertical = 8
+alignment = 1
+
+[node name="Reinicio2" parent="MarginContainer/VBoxContainer/HBoxContainer" instance=ExtResource("3_jl2rw")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "Reinicio
+"
+
+[node name="Inicio2" parent="MarginContainer/VBoxContainer/HBoxContainer" instance=ExtResource("3_jl2rw")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "Inicio
+"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/Reinicio2" to="." method="_on_reinicio_2_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/Inicio2" to="." method="_on_inicio_2_pressed"]

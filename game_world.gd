@@ -6,6 +6,11 @@ extends Node2D
 @onready var time_label: Label = $HUD/timelabel
 @onready var message_label: Label = $HUD/messagelabel
 
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("pause"):
+		get_tree().change_scene_to_file("res://Assets/menus/menu pausa/menu_pausa.tscn")
+	pass
+
 var time_left := 180  # 3 minutos
 var _retry_count := 3
 
@@ -81,4 +86,4 @@ func _on_retry_timer_timeout() -> void:
 		message_label.text = "Inténtalo de nuevo…  " + str(_retry_count)
 	else:
 		# Reiniciar la escena
-		get_tree().reload_current_scene()
+		get_tree().change_scene_to_file("res://menus/menu final/menu_final.tscn")

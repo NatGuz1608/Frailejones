@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://broyravh24aii"
-path="res://.godot/imported/caminata capa pintura 111.png-74502f79c8d584bb850fdc559aa55f66.ctex"
+uid="uid://ukjikqkukrgj"
+path="res://.godot/imported/botones.png-81af218acb037106a978913f97e48e6d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/caminata capa pintura 111.png"
-dest_files=["res://.godot/imported/caminata capa pintura 111.png-74502f79c8d584bb850fdc559aa55f66.ctex"]
+source_file="res://Assets/menus/botones.png"
+dest_files=["res://.godot/imported/botones.png-81af218acb037106a978913f97e48e6d.ctex"]
 
 [params]
 

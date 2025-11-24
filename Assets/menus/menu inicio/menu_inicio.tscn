@@ -1,0 +1,92 @@
+[gd_scene load_steps=7 format=3 uid="uid://csl4i6slsrua1"]
+
+[ext_resource type="Theme" uid="uid://d0ypeyhhl5p2u" path="res://Assets/menus/menu inicio/menu_inicio.tres" id="1_qtkmd"]
+[ext_resource type="Script" uid="uid://b3gg6qpjr5jxg" path="res://Assets/menus/menu inicio/menu_inicio.gd" id="2_6abwe"]
+[ext_resource type="Texture2D" uid="uid://dekqcf57cl45k" path="res://Assets/menus/menu inicio/menu_inicio_vertical.png" id="3_6abwe"]
+[ext_resource type="PackedScene" uid="uid://bcrtexiecbhx1" path="res://Assets/menus/menu inicio/custombutton.tscn" id="3_vp333"]
+[ext_resource type="AudioStream" uid="uid://ctfoxrbe1nt8g" path="res://Assets/menus/audio menus.mp3" id="5_vp333"]
+
+[sub_resource type="Theme" id="Theme_ylpju"]
+MarginContainer/constants/margin_bottom = 10
+MarginContainer/constants/margin_left = 10
+MarginContainer/constants/margin_right = 10
+MarginContainer/constants/margin_top = 10
+
+[node name="menu inicio" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_qtkmd")
+script = ExtResource("2_6abwe")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(239.21875, 459.644)
+scale = Vector2(0.9990886, 1.078117)
+texture = ExtResource("3_6abwe")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = 5.0
+offset_right = -4.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_ylpju")
+theme_override_constants/margin_top = 181
+theme_override_constants/margin_right = 67
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_constants/separation = 55
+
+[node name="Jugar" parent="MarginContainer/VBoxContainer" instance=ExtResource("3_vp333")]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "    Jugar    "
+
+[node name="Salir" parent="MarginContainer/VBoxContainer" instance=ExtResource("3_vp333")]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "    Salir    "
+
+[node name="Seleccion" parent="MarginContainer/VBoxContainer" instance=ExtResource("3_vp333")]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = ""
+
+[node name="audiofondo" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_vp333")
+volume_db = -8.211
+autoplay = true
+
+[node name="VSlider" type="VSlider" parent="."]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 731.0
+offset_right = 65.0
+offset_bottom = 830.0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.055000003
+anchor_bottom = 0.215
+offset_left = 13.0
+offset_top = 694.0
+offset_right = 39.6
+offset_bottom = 533.39
+text = "Sonido"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Jugar" to="." method="_on_jugar_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Salir" to="." method="_on_salir_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Seleccion" to="." method="_on_seleccion_pressed"]
